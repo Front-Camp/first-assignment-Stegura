@@ -8,7 +8,20 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  /* your logic here...*/
+  if (typeof data === 'object') {
+    if (Array.isArray(data)) {
+      return false;
+
+    } else if (data === null) {
+      return false;
+
+    } else {
+      return true;
+
+    }
+  } else {
+    return false;
+  }
 };
 
 export default isObject;
